@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>es.dte.paa</groupId>
+    <artifactId>p4-servidor</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <packaging>war</packaging>
+
+    <properties>
+        <maven.compiler.source>11</maven.compiler.source>
+        <maven.compiler.target>11</maven.compiler.target>
+        <failOnMissingWebXml>false</failOnMissingWebXml>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.apache.derby</groupId>
+            <artifactId>derbytools</artifactId>
+            <version>10.15.2.0</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.derby</groupId>
+            <artifactId>derby</artifactId>
+            <version>10.15.2.0</version>
+        </dependency>
+        <dependency>
+            <groupId>org.hibernate</groupId>
+            <artifactId>hibernate-entitymanager</artifactId>
+            <version>5.6.11.Final</version>
+        </dependency>
+        <dependency>
+            <groupId>org.jxmapviewer</groupId>
+            <artifactId>jxmapviewer2</artifactId>
+            <version>2.6</version>
+            <scope>compile</scope>
+        </dependency>
+		<dependency>
+			<groupId>org.junit.jupiter</groupId>
+			<artifactId>junit-jupiter-engine</artifactId>
+			<version>5.8.2</version>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+            <groupId>org.json</groupId>
+            <artifactId>json</artifactId>
+            <version>20220320</version>
+        </dependency>
+        <dependency>
+            <groupId>javax.servlet</groupId> 
+            <artifactId>javax.servlet-api</artifactId> 
+            <version>4.0.1</version> 
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId> 
+            <artifactId>jackson-databind</artifactId> 
+            <version>2.13.2</version>
+        </dependency>
+        <dependency>
+            <groupId>com.fasterxml.jackson.datatype</groupId> 
+            <artifactId>jackson-datatype-jsr310</artifactId> 
+            <version>2.13.2</version>
+        </dependency>
+
+    </dependencies>
+    <build>
+    	<plugins>
+    		<plugin>
+    			<groupId>org.apache.maven.plugins</groupId>
+    			<artifactId>maven-surefire-plugin</artifactId>
+    			<version>3.0.0-M5</version>
+    		</plugin>
+    	</plugins>
+    </build>
+</project>
